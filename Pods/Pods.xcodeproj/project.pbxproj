@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		188F47AADFBA1ECF1DC85CB3F5F898C2 /* XBPageCurl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51294B8161FCDF6FD2BF8D79B78BA77B /* XBPageCurl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198B8E77BC1D23AA259B3FF46FCD83BD /* XBPageCurlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A9D9638A2D8CDCD6ED494E7B82DB076 /* XBPageCurlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A03A2855030F8EAB1A531565871C229 /* XBPageCurlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6838611545F8E8228698C1CC91125D26 /* XBPageCurlView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1B9609144788D9BDC9E92CFEF5DFAC49 /* NextPageVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 364713FDB6A5F18E4361AA6B0CB76D51 /* NextPageVertexShader.glsl */; };
+		24C4114092B5EF57B95E45532F545177 /* FrontVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E35F533BB398C41FEBEE186426EB6B1C /* FrontVertexShader.glsl */; };
+		2555E3458B4C77AEE7C9A92A94222ED1 /* NextPageNoTextureVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 252B6D149D8D82D2D226FD7B0F99118F /* NextPageNoTextureVertexShader.glsl */; };
+		25E2F7E706235B1FF8FDCE193DD0E11C /* XBPageCurl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5607600F00DC7EAD598A6ADBE07C40 /* XBPageCurl-dummy.m */; };
+		2810FC843D30D1508C3C36F19D771DEE /* BackVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1615F9B9AD92A8C06B633CAEE4B2C127 /* BackVertexShader.glsl */; };
+		2D46DC40720E249C1AC1AED1EFDC5AF4 /* XBSnappingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D4495CC5C676566DFE56682955DC86 /* XBSnappingPoint.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		32563558D90AA023E63C6E8D9CC5F85C /* XBCurlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 754E73589CBFDA7D476AB8A15E94D082 /* XBCurlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38E99FA5DFB25F2322BA0FC4081C7643 /* BackFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 8878F7B6147B6467293B3992A4A3D495 /* BackFragmentShader.glsl */; };
+		472B3F9C900BC11D3A5B9018927CFEBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52684686B90B80655AC7EE170F744D4 /* UIKit.framework */; };
+		4C7EC601E6865C7B3135125B7FC7EC00 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941ED5349BF192E6E8253171C009839E /* OpenGLES.framework */; };
+		5092A9E1AB2965E35D08F22F832C0A19 /* XBAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322AD76E60774C335883E7ACD0A2786 /* XBAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52CAD570DC30C2B94B8931DCCE83B69F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D132BF1AB1B57AAD4C4E2E12F577C1 /* Foundation.framework */; };
+		6246B0F121B2F1DBBAB1071B0FFE5592 /* XBPageDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2D20D2C23EAB4ECF5C54FF65D4EC5 /* XBPageDragView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6643B97129255218EEE937A8899EC336 /* XBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 564FEC8F1F5FBEA4DD98B5B0EAACD2A3 /* XBAnimation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6E48A9ECB7F985CAFFD930B31DE81B40 /* XBAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C72A41823D36CF127E5639CB2D761648 /* XBAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FE4D92CD75C9C59FC7E6BA3847042B7 /* XBPageDragView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37CA717D4B764034CABC4718070940EB /* XBPageDragView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77B78A8FE576F79432FF19BD74029A00 /* XBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6566E05ACDFFFC7B1A9F3A08FBAF30 /* XBAnimationManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7C6A6282F2A9316B0EF9EBD96FBDFE48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D132BF1AB1B57AAD4C4E2E12F577C1 /* Foundation.framework */; };
+		93DDA77D6186BF4B603E792B8EBFEB84 /* NextPageNoTextureFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 50DA96CA90D58E2E5B53422942A9C0CD /* NextPageNoTextureFragmentShader.glsl */; };
+		95DE1ABA722D79B49BB92447645F7E32 /* Pods-StickerAnimationTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF309E67355E83EE20529C633B196E8 /* Pods-StickerAnimationTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC67289C722A087697563552B86A5A69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3367E08D2BA02769F66FDAFB6FA3D818 /* CoreGraphics.framework */; };
+		C5F0D040299C2F87B694A25814B9F9DD /* XBSnappingPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 98893AA7ED3172199C53955F095CD1DE /* XBSnappingPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2948D07F331F54EA75F4EAFF3CA8EF4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D163748C45738B6C0EB4CE4013E1C8A /* QuartzCore.framework */; };
+		E011D44655D290C2D553B19DB3F02089 /* XBCurlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4818913FAB66668E0883456D12257D86 /* XBCurlView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E0BAC01191F10F62EF1C3967268766DA /* Pods-StickerAnimationTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A81F1A60AEEDAF815425082724A53 /* Pods-StickerAnimationTest-dummy.m */; };
+		E688AC138A3EDF1B97BEC7ABFEEC46FC /* NextPageFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 29DFBEADC29AEBE5EB3FDC7EDDE2CC05 /* NextPageFragmentShader.glsl */; };
+		F4E121B2FE94B931ECD9A3F2890ED3AA /* CGPointAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = FFBD8E375481CDFE2DD95BF7BA7627C5 /* CGPointAdditions.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F58FECB908AECE91B8BBC008C0C24D0E /* CGPointAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A1CA5CAF061C7C2374BF6898A1FCAD6 /* CGPointAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F93F0589F9D259A44A926F4F2D793EFD /* FrontFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = AB0A428F0C3EEAB8C90BE21EDA525827 /* FrontFragmentShader.glsl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFACBE5BDB26E39A04BA5D238117A17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 873F4FAA531675AC4E3CB62BCEF0BD0D;
+			remoteInfo = XBPageCurl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C6566E05ACDFFFC7B1A9F3A08FBAF30 /* XBAnimationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XBAnimationManager.m; path = XBPageCurl/XBAnimationManager.m; sourceTree = "<group>"; };
+		0CF8087356BC746D8DFFB1F2891E7061 /* Pods-StickerAnimationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StickerAnimationTest.release.xcconfig"; sourceTree = "<group>"; };
+		0D54BAF9F7CE3E43DD9A0B1FFD275358 /* XBPageCurl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XBPageCurl-prefix.pch"; sourceTree = "<group>"; };
+		1615F9B9AD92A8C06B633CAEE4B2C127 /* BackVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BackVertexShader.glsl; path = XBPageCurl/Resources/BackVertexShader.glsl; sourceTree = "<group>"; };
+		2322AD76E60774C335883E7ACD0A2786 /* XBAnimationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XBAnimationManager.h; path = XBPageCurl/XBAnimationManager.h; sourceTree = "<group>"; };
+		23D4495CC5C676566DFE56682955DC86 /* XBSnappingPoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XBSnappingPoint.m; path = XBPageCurl/XBSnappingPoint.m; sourceTree = "<group>"; };
+		252B6D149D8D82D2D226FD7B0F99118F /* NextPageNoTextureVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NextPageNoTextureVertexShader.glsl; path = XBPageCurl/Resources/NextPageNoTextureVertexShader.glsl; sourceTree = "<group>"; };
+		29DFBEADC29AEBE5EB3FDC7EDDE2CC05 /* NextPageFragmentShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NextPageFragmentShader.glsl; path = XBPageCurl/Resources/NextPageFragmentShader.glsl; sourceTree = "<group>"; };
+		2A1CA5CAF061C7C2374BF6898A1FCAD6 /* CGPointAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPointAdditions.h; path = XBPageCurl/CGPointAdditions.h; sourceTree = "<group>"; };
+		2D0F72F5303A33F964E98C1EF57434D1 /* Pods-StickerAnimationTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-StickerAnimationTest.modulemap"; sourceTree = "<group>"; };
+		3367E08D2BA02769F66FDAFB6FA3D818 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		364713FDB6A5F18E4361AA6B0CB76D51 /* NextPageVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NextPageVertexShader.glsl; path = XBPageCurl/Resources/NextPageVertexShader.glsl; sourceTree = "<group>"; };
+		37CA717D4B764034CABC4718070940EB /* XBPageDragView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XBPageDragView.h; path = XBPageCurl/XBPageDragView.h; sourceTree = "<group>"; };
+		43E37F5FA2BEC4089E282F7E6200C48D /* Pods-StickerAnimationTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StickerAnimationTest-frameworks.sh"; sourceTree = "<group>"; };
+		4818913FAB66668E0883456D12257D86 /* XBCurlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XBCurlView.m; path = XBPageCurl/XBCurlView.m; sourceTree = "<group>"; };
+		50CEAC82C3C7DC8EC46A293F739C454E /* Pods-StickerAnimationTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StickerAnimationTest-resources.sh"; sourceTree = "<group>"; };
+		50DA96CA90D58E2E5B53422942A9C0CD /* NextPageNoTextureFragmentShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NextPageNoTextureFragmentShader.glsl; path = XBPageCurl/Resources/NextPageNoTextureFragmentShader.glsl; sourceTree = "<group>"; };
+		51294B8161FCDF6FD2BF8D79B78BA77B /* XBPageCurl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XBPageCurl-umbrella.h"; sourceTree = "<group>"; };
+		564FEC8F1F5FBEA4DD98B5B0EAACD2A3 /* XBAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XBAnimation.m; path = XBPageCurl/XBAnimation.m; sourceTree = "<group>"; };
+		5EB2D20D2C23EAB4ECF5C54FF65D4EC5 /* XBPageDragView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XBPageDragView.m; path = XBPageCurl/XBPageDragView.m; sourceTree = "<group>"; };
+		619618FAC17624E9DC0C7F5F37006D6A /* XBPageCurl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XBPageCurl.modulemap; sourceTree = "<group>"; };
+		6838611545F8E8228698C1CC91125D26 /* XBPageCurlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XBPageCurlView.m; path = XBPageCurl/XBPageCurlView.m; sourceTree = "<group>"; };
+		6A9D9638A2D8CDCD6ED494E7B82DB076 /* XBPageCurlView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XBPageCurlView.h; path = XBPageCurl/XBPageCurlView.h; sourceTree = "<group>"; };
+		6D163748C45738B6C0EB4CE4013E1C8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		754E73589CBFDA7D476AB8A15E94D082 /* XBCurlView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XBCurlView.h; path = XBPageCurl/XBCurlView.h; sourceTree = "<group>"; };
+		7A5607600F00DC7EAD598A6ADBE07C40 /* XBPageCurl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XBPageCurl-dummy.m"; sourceTree = "<group>"; };
+		8878F7B6147B6467293B3992A4A3D495 /* BackFragmentShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BackFragmentShader.glsl; path = XBPageCurl/Resources/BackFragmentShader.glsl; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		941ED5349BF192E6E8253171C009839E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		9798C833833A880F253055033A0B5504 /* XBPageCurl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XBPageCurl.xcconfig; sourceTree = "<group>"; };
+		98893AA7ED3172199C53955F095CD1DE /* XBSnappingPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XBSnappingPoint.h; path = XBPageCurl/XBSnappingPoint.h; sourceTree = "<group>"; };
+		9C77320259D3947487D717AE3DA30053 /* XBPageCurl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XBPageCurl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF309E67355E83EE20529C633B196E8 /* Pods-StickerAnimationTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StickerAnimationTest-umbrella.h"; sourceTree = "<group>"; };
+		A52684686B90B80655AC7EE170F744D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		AB0A428F0C3EEAB8C90BE21EDA525827 /* FrontFragmentShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FrontFragmentShader.glsl; path = XBPageCurl/Resources/FrontFragmentShader.glsl; sourceTree = "<group>"; };
+		ABE77F33809AAA5959CF0EC00EAAF5A0 /* Pods_StickerAnimationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickerAnimationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC657CFB55AA29D2F298CC6AA20503F3 /* Pods-StickerAnimationTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StickerAnimationTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B7D132BF1AB1B57AAD4C4E2E12F577C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BFF55B2BA1F07E5B5DC9C368A745CA58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C72A41823D36CF127E5639CB2D761648 /* XBAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XBAnimation.h; path = XBPageCurl/XBAnimation.h; sourceTree = "<group>"; };
+		CC9A81F1A60AEEDAF815425082724A53 /* Pods-StickerAnimationTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StickerAnimationTest-dummy.m"; sourceTree = "<group>"; };
+		E35F533BB398C41FEBEE186426EB6B1C /* FrontVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FrontVertexShader.glsl; path = XBPageCurl/Resources/FrontVertexShader.glsl; sourceTree = "<group>"; };
+		E4CA31FB4BDA5659F4EA9A0ACF9F4D6D /* Pods-StickerAnimationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StickerAnimationTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E9E73C27FB8AA8C129BEDA9DFF2535F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F775C1D650BC53E105FC568F9314D999 /* Pods-StickerAnimationTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StickerAnimationTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		FFBD8E375481CDFE2DD95BF7BA7627C5 /* CGPointAdditions.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = CGPointAdditions.c; path = XBPageCurl/CGPointAdditions.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDD6CBE76992BC74C4E6B5A486481244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC67289C722A087697563552B86A5A69 /* CoreGraphics.framework in Frameworks */,
+				52CAD570DC30C2B94B8931DCCE83B69F /* Foundation.framework in Frameworks */,
+				4C7EC601E6865C7B3135125B7FC7EC00 /* OpenGLES.framework in Frameworks */,
+				D2948D07F331F54EA75F4EAFF3CA8EF4 /* QuartzCore.framework in Frameworks */,
+				472B3F9C900BC11D3A5B9018927CFEBD /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF4441C8DA71CC16F7122862FB3A610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C6A6282F2A9316B0EF9EBD96FBDFE48 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7232F99107DA7C6BE96EECCF7CE3E464 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D45FA18448D426B136F310893C84CB0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D40527817916DCF2B3D728FD1F880B0A /* Pods-StickerAnimationTest */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4DE1B7F72F8A396BD857F0CF99E24CEA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9E73C27FB8AA8C129BEDA9DFF2535F8 /* Info.plist */,
+				619618FAC17624E9DC0C7F5F37006D6A /* XBPageCurl.modulemap */,
+				9798C833833A880F253055033A0B5504 /* XBPageCurl.xcconfig */,
+				7A5607600F00DC7EAD598A6ADBE07C40 /* XBPageCurl-dummy.m */,
+				0D54BAF9F7CE3E43DD9A0B1FFD275358 /* XBPageCurl-prefix.pch */,
+				51294B8161FCDF6FD2BF8D79B78BA77B /* XBPageCurl-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XBPageCurl";
+			sourceTree = "<group>";
+		};
+		583A1B94DD11932FA13500D6D095D140 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE77F33809AAA5959CF0EC00EAAF5A0 /* Pods_StickerAnimationTest.framework */,
+				9C77320259D3947487D717AE3DA30053 /* XBPageCurl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6023A290B494AA6F815A16D210B9362A /* XBPageCurl */ = {
+			isa = PBXGroup;
+			children = (
+				FFBD8E375481CDFE2DD95BF7BA7627C5 /* CGPointAdditions.c */,
+				2A1CA5CAF061C7C2374BF6898A1FCAD6 /* CGPointAdditions.h */,
+				C72A41823D36CF127E5639CB2D761648 /* XBAnimation.h */,
+				564FEC8F1F5FBEA4DD98B5B0EAACD2A3 /* XBAnimation.m */,
+				2322AD76E60774C335883E7ACD0A2786 /* XBAnimationManager.h */,
+				0C6566E05ACDFFFC7B1A9F3A08FBAF30 /* XBAnimationManager.m */,
+				754E73589CBFDA7D476AB8A15E94D082 /* XBCurlView.h */,
+				4818913FAB66668E0883456D12257D86 /* XBCurlView.m */,
+				6A9D9638A2D8CDCD6ED494E7B82DB076 /* XBPageCurlView.h */,
+				6838611545F8E8228698C1CC91125D26 /* XBPageCurlView.m */,
+				37CA717D4B764034CABC4718070940EB /* XBPageDragView.h */,
+				5EB2D20D2C23EAB4ECF5C54FF65D4EC5 /* XBPageDragView.m */,
+				98893AA7ED3172199C53955F095CD1DE /* XBSnappingPoint.h */,
+				23D4495CC5C676566DFE56682955DC86 /* XBSnappingPoint.m */,
+				84CA6EA4856033EAB409CB47D67F3318 /* Resources */,
+				4DE1B7F72F8A396BD857F0CF99E24CEA /* Support Files */,
+			);
+			path = XBPageCurl;
+			sourceTree = "<group>";
+		};
+		7232F99107DA7C6BE96EECCF7CE3E464 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3367E08D2BA02769F66FDAFB6FA3D818 /* CoreGraphics.framework */,
+				B7D132BF1AB1B57AAD4C4E2E12F577C1 /* Foundation.framework */,
+				941ED5349BF192E6E8253171C009839E /* OpenGLES.framework */,
+				6D163748C45738B6C0EB4CE4013E1C8A /* QuartzCore.framework */,
+				A52684686B90B80655AC7EE170F744D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				F29DA2B32DAB0CF87288C50A8FB83617 /* Pods */,
+				583A1B94DD11932FA13500D6D095D140 /* Products */,
+				2D45FA18448D426B136F310893C84CB0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		84CA6EA4856033EAB409CB47D67F3318 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8878F7B6147B6467293B3992A4A3D495 /* BackFragmentShader.glsl */,
+				1615F9B9AD92A8C06B633CAEE4B2C127 /* BackVertexShader.glsl */,
+				AB0A428F0C3EEAB8C90BE21EDA525827 /* FrontFragmentShader.glsl */,
+				E35F533BB398C41FEBEE186426EB6B1C /* FrontVertexShader.glsl */,
+				29DFBEADC29AEBE5EB3FDC7EDDE2CC05 /* NextPageFragmentShader.glsl */,
+				50DA96CA90D58E2E5B53422942A9C0CD /* NextPageNoTextureFragmentShader.glsl */,
+				252B6D149D8D82D2D226FD7B0F99118F /* NextPageNoTextureVertexShader.glsl */,
+				364713FDB6A5F18E4361AA6B0CB76D51 /* NextPageVertexShader.glsl */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D40527817916DCF2B3D728FD1F880B0A /* Pods-StickerAnimationTest */ = {
+			isa = PBXGroup;
+			children = (
+				BFF55B2BA1F07E5B5DC9C368A745CA58 /* Info.plist */,
+				2D0F72F5303A33F964E98C1EF57434D1 /* Pods-StickerAnimationTest.modulemap */,
+				AC657CFB55AA29D2F298CC6AA20503F3 /* Pods-StickerAnimationTest-acknowledgements.markdown */,
+				F775C1D650BC53E105FC568F9314D999 /* Pods-StickerAnimationTest-acknowledgements.plist */,
+				CC9A81F1A60AEEDAF815425082724A53 /* Pods-StickerAnimationTest-dummy.m */,
+				43E37F5FA2BEC4089E282F7E6200C48D /* Pods-StickerAnimationTest-frameworks.sh */,
+				50CEAC82C3C7DC8EC46A293F739C454E /* Pods-StickerAnimationTest-resources.sh */,
+				9DF309E67355E83EE20529C633B196E8 /* Pods-StickerAnimationTest-umbrella.h */,
+				E4CA31FB4BDA5659F4EA9A0ACF9F4D6D /* Pods-StickerAnimationTest.debug.xcconfig */,
+				0CF8087356BC746D8DFFB1F2891E7061 /* Pods-StickerAnimationTest.release.xcconfig */,
+			);
+			name = "Pods-StickerAnimationTest";
+			path = "Target Support Files/Pods-StickerAnimationTest";
+			sourceTree = "<group>";
+		};
+		F29DA2B32DAB0CF87288C50A8FB83617 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6023A290B494AA6F815A16D210B9362A /* XBPageCurl */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B060C0D97A52F766D59BAA58F098A04A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58FECB908AECE91B8BBC008C0C24D0E /* CGPointAdditions.h in Headers */,
+				6E48A9ECB7F985CAFFD930B31DE81B40 /* XBAnimation.h in Headers */,
+				5092A9E1AB2965E35D08F22F832C0A19 /* XBAnimationManager.h in Headers */,
+				32563558D90AA023E63C6E8D9CC5F85C /* XBCurlView.h in Headers */,
+				188F47AADFBA1ECF1DC85CB3F5F898C2 /* XBPageCurl-umbrella.h in Headers */,
+				198B8E77BC1D23AA259B3FF46FCD83BD /* XBPageCurlView.h in Headers */,
+				6FE4D92CD75C9C59FC7E6BA3847042B7 /* XBPageDragView.h in Headers */,
+				C5F0D040299C2F87B694A25814B9F9DD /* XBSnappingPoint.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B791F3CEA43FB31346C62FF1BDD229F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95DE1ABA722D79B49BB92447645F7E32 /* Pods-StickerAnimationTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		873F4FAA531675AC4E3CB62BCEF0BD0D /* XBPageCurl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 893EB526CE5848813D921664EBD85328 /* Build configuration list for PBXNativeTarget "XBPageCurl" */;
+			buildPhases = (
+				5F854C97796CC90840432A9CF966EE6A /* Sources */,
+				CDD6CBE76992BC74C4E6B5A486481244 /* Frameworks */,
+				B060C0D97A52F766D59BAA58F098A04A /* Headers */,
+				C4FC80A22738587078D5EAB43EE98ABF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XBPageCurl;
+			productName = XBPageCurl;
+			productReference = 9C77320259D3947487D717AE3DA30053 /* XBPageCurl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		87656D850F10A0A4BF2372BB08E4822A /* Pods-StickerAnimationTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15827F624B757C6C714E61EDBFA4E7CD /* Build configuration list for PBXNativeTarget "Pods-StickerAnimationTest" */;
+			buildPhases = (
+				28E3C6EE29E60C53048788F871EB8992 /* Sources */,
+				FDF4441C8DA71CC16F7122862FB3A610 /* Frameworks */,
+				B791F3CEA43FB31346C62FF1BDD229F6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA101BF2F6E669B7837E49174F5AF4F4 /* PBXTargetDependency */,
+			);
+			name = "Pods-StickerAnimationTest";
+			productName = "Pods-StickerAnimationTest";
+			productReference = ABE77F33809AAA5959CF0EC00EAAF5A0 /* Pods_StickerAnimationTest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 583A1B94DD11932FA13500D6D095D140 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87656D850F10A0A4BF2372BB08E4822A /* Pods-StickerAnimationTest */,
+				873F4FAA531675AC4E3CB62BCEF0BD0D /* XBPageCurl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4FC80A22738587078D5EAB43EE98ABF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E99FA5DFB25F2322BA0FC4081C7643 /* BackFragmentShader.glsl in Resources */,
+				2810FC843D30D1508C3C36F19D771DEE /* BackVertexShader.glsl in Resources */,
+				F93F0589F9D259A44A926F4F2D793EFD /* FrontFragmentShader.glsl in Resources */,
+				24C4114092B5EF57B95E45532F545177 /* FrontVertexShader.glsl in Resources */,
+				E688AC138A3EDF1B97BEC7ABFEEC46FC /* NextPageFragmentShader.glsl in Resources */,
+				93DDA77D6186BF4B603E792B8EBFEB84 /* NextPageNoTextureFragmentShader.glsl in Resources */,
+				2555E3458B4C77AEE7C9A92A94222ED1 /* NextPageNoTextureVertexShader.glsl in Resources */,
+				1B9609144788D9BDC9E92CFEF5DFAC49 /* NextPageVertexShader.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28E3C6EE29E60C53048788F871EB8992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0BAC01191F10F62EF1C3967268766DA /* Pods-StickerAnimationTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F854C97796CC90840432A9CF966EE6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E121B2FE94B931ECD9A3F2890ED3AA /* CGPointAdditions.c in Sources */,
+				6643B97129255218EEE937A8899EC336 /* XBAnimation.m in Sources */,
+				77B78A8FE576F79432FF19BD74029A00 /* XBAnimationManager.m in Sources */,
+				E011D44655D290C2D553B19DB3F02089 /* XBCurlView.m in Sources */,
+				25E2F7E706235B1FF8FDCE193DD0E11C /* XBPageCurl-dummy.m in Sources */,
+				1A03A2855030F8EAB1A531565871C229 /* XBPageCurlView.m in Sources */,
+				6246B0F121B2F1DBBAB1071B0FFE5592 /* XBPageDragView.m in Sources */,
+				2D46DC40720E249C1AC1AED1EFDC5AF4 /* XBSnappingPoint.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA101BF2F6E669B7837E49174F5AF4F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XBPageCurl;
+			target = 873F4FAA531675AC4E3CB62BCEF0BD0D /* XBPageCurl */;
+			targetProxy = DFACBE5BDB26E39A04BA5D238117A17D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2088826628A296F44879A6EB7EFBEC88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4CA31FB4BDA5659F4EA9A0ACF9F4D6D /* Pods-StickerAnimationTest.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-StickerAnimationTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StickerAnimationTest/Pods-StickerAnimationTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_StickerAnimationTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8430C53F3AFCB5A7B5BFC5CE8ED4454 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9798C833833A880F253055033A0B5504 /* XBPageCurl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XBPageCurl/XBPageCurl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XBPageCurl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XBPageCurl/XBPageCurl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = XBPageCurl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF658A9FDB891F342815B7DADBF95A47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9798C833833A880F253055033A0B5504 /* XBPageCurl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XBPageCurl/XBPageCurl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XBPageCurl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XBPageCurl/XBPageCurl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = XBPageCurl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E30CA3AA8C24D3DA93C756BFF30C7997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF8087356BC746D8DFFB1F2891E7061 /* Pods-StickerAnimationTest.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-StickerAnimationTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StickerAnimationTest/Pods-StickerAnimationTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_StickerAnimationTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15827F624B757C6C714E61EDBFA4E7CD /* Build configuration list for PBXNativeTarget "Pods-StickerAnimationTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2088826628A296F44879A6EB7EFBEC88 /* Debug */,
+				E30CA3AA8C24D3DA93C756BFF30C7997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		893EB526CE5848813D921664EBD85328 /* Build configuration list for PBXNativeTarget "XBPageCurl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8430C53F3AFCB5A7B5BFC5CE8ED4454 /* Debug */,
+				DF658A9FDB891F342815B7DADBF95A47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

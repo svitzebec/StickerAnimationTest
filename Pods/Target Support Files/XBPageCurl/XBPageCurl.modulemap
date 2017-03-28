@@ -1,0 +1,6 @@
+framework module XBPageCurl {
+  umbrella header "XBPageCurl-umbrella.h"
+
+  export *
+  module * { export * }
+}

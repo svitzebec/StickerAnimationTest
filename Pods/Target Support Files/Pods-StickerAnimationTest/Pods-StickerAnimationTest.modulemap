@@ -1,0 +1,6 @@
+framework module Pods_StickerAnimationTest {
+  umbrella header "Pods-StickerAnimationTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

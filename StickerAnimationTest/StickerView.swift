@@ -24,7 +24,9 @@ class StickerView: UIView {
     var placeholderImageView: UIImageView
     var stickerImageView: UIImageView
     
-    var backgroundView: UIView = UIView()
+    var curlView: XBCurlView?
+    
+    var isCurled: Bool = false
     
     //
     // MARK: StickerView init
@@ -54,10 +56,15 @@ class StickerView: UIView {
     
     private func setup() {
         
-        backgroundView.backgroundColor = UIColor.white
+        curlView = XBCurlView(frame: bounds)
+        curlView?.isOpaque = false
+        curlView?.pageOpaque = true
         
         addSubview(placeholderImageView)
         addSubview(stickerImageView)
+        
+        placeholderImageView.frame = bounds
+        stickerImageView.frame = bounds
         
         translatesAutoresizingMaskIntoConstraints = false
         placeholderImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,29 +75,41 @@ class StickerView: UIView {
         let placeholderBottomConstraint = NSLayoutConstraint(item: placeholderImageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
         let placeholderLeadingConstraint = NSLayoutConstraint(item: placeholderImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0)
         
-        addConstraints([placeholderTopConstraint, placeholderTrailingConstraint, placeholderBottomConstraint, placeholderLeadingConstraint])
+        //addConstraints([placeholderTopConstraint, placeholderTrailingConstraint, placeholderBottomConstraint, placeholderLeadingConstraint])
         
         let stickerTopConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
         let stickerTrailingConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0)
         let stickerBottomConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
         let stickerLeadingConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0)
         
-        addConstraints([stickerTopConstraint, stickerTrailingConstraint, stickerBottomConstraint, stickerLeadingConstraint])
+        //addConstraints([stickerTopConstraint, stickerTrailingConstraint, stickerBottomConstraint, stickerLeadingConstraint])
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         
-        bringSubview(toFront: placeholderImageView)
-        bringSubview(toFront: stickerImageView)
+        placeholderImageView.frame = bounds
+        stickerImageView.frame = bounds
         
-        //placeholderImageView.backgroundColor = .clear
-        //stickerImageView.backgroundColor = .clear
+        curlView?.frame = bounds
     }
     
     func animate() {
         
-        backgroundView.frame = bounds
+        if isCurled {
+            curlView?.uncurlAnimated(withDuration: 1.2, completion: { _ in
+                self.stickerImageView.frame = self.placeholderImageView.frame
+                self.addSubview(self.stickerImageView)
+            })
+            isCurled = false
+        } else {
+            curlView?.curl(stickerImageView, cylinderPosition: CGPoint(x: -100, y: bounds.height / 2), cylinderAngle: .pi / 2.5, cylinderRadius: 120, animatedWithDuration: 1.2)
+            isCurled = true
+        }
         
         //UIView.animate(withDuration: 1, animations: {
             
-            let animation = CATransition()
+            /* let animation = CATransition()
             animation.duration = 1.2
             animation.startProgress = 1.0
             animation.endProgress = 0.0
@@ -104,7 +123,7 @@ class StickerView: UIView {
             
             self.layer.shadowColor = UIColor.white.cgColor
             self.stickerImageView.layer.shadowColor = UIColor.white.cgColor
-            self.placeholderImageView.layer.shadowColor = UIColor.white.cgColor
+            self.placeholderImageView.layer.shadowColor = UIColor.white.cgColor */
         //})
         
     }

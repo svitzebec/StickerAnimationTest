@@ -35,6 +35,7 @@
 		D2948D07F331F54EA75F4EAFF3CA8EF4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D163748C45738B6C0EB4CE4013E1C8A /* QuartzCore.framework */; };
 		E011D44655D290C2D553B19DB3F02089 /* XBCurlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4818913FAB66668E0883456D12257D86 /* XBCurlView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E0BAC01191F10F62EF1C3967268766DA /* Pods-StickerAnimationTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A81F1A60AEEDAF815425082724A53 /* Pods-StickerAnimationTest-dummy.m */; };
+		E24C2D401E8B9D78003B93A8 /* BackPageGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D3F1E8B9D78003B93A8 /* BackPageGradient.png */; };
 		E688AC138A3EDF1B97BEC7ABFEEC46FC /* NextPageFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 29DFBEADC29AEBE5EB3FDC7EDDE2CC05 /* NextPageFragmentShader.glsl */; };
 		F4E121B2FE94B931ECD9A3F2890ED3AA /* CGPointAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = FFBD8E375481CDFE2DD95BF7BA7627C5 /* CGPointAdditions.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F58FECB908AECE91B8BBC008C0C24D0E /* CGPointAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A1CA5CAF061C7C2374BF6898A1FCAD6 /* CGPointAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +94,7 @@
 		BFF55B2BA1F07E5B5DC9C368A745CA58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72A41823D36CF127E5639CB2D761648 /* XBAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XBAnimation.h; path = XBPageCurl/XBAnimation.h; sourceTree = "<group>"; };
 		CC9A81F1A60AEEDAF815425082724A53 /* Pods-StickerAnimationTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StickerAnimationTest-dummy.m"; sourceTree = "<group>"; };
+		E24C2D3F1E8B9D78003B93A8 /* BackPageGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackPageGradient.png; path = XBPageCurl/Resources/BackPageGradient.png; sourceTree = "<group>"; };
 		E35F533BB398C41FEBEE186426EB6B1C /* FrontVertexShader.glsl */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FrontVertexShader.glsl; path = XBPageCurl/Resources/FrontVertexShader.glsl; sourceTree = "<group>"; };
 		E4CA31FB4BDA5659F4EA9A0ACF9F4D6D /* Pods-StickerAnimationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StickerAnimationTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E9E73C27FB8AA8C129BEDA9DFF2535F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		84CA6EA4856033EAB409CB47D67F3318 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E24C2D3F1E8B9D78003B93A8 /* BackPageGradient.png */,
 				8878F7B6147B6467293B3992A4A3D495 /* BackFragmentShader.glsl */,
 				1615F9B9AD92A8C06B633CAEE4B2C127 /* BackVertexShader.glsl */,
 				AB0A428F0C3EEAB8C90BE21EDA525827 /* FrontFragmentShader.glsl */,
@@ -347,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24C2D401E8B9D78003B93A8 /* BackPageGradient.png in Resources */,
 				38E99FA5DFB25F2322BA0FC4081C7643 /* BackFragmentShader.glsl in Resources */,
 				2810FC843D30D1508C3C36F19D771DEE /* BackVertexShader.glsl in Resources */,
 				F93F0589F9D259A44A926F4F2D793EFD /* FrontFragmentShader.glsl in Resources */,

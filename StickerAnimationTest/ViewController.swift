@@ -10,56 +10,51 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var stickerView: StickerView!
     
-    var shapeLayer: CAShapeLayer = CAShapeLayer()
+    @IBOutlet weak var placeholderImageView: UIImageView!
+    @IBOutlet weak var stickerImageView: UIImageView!
+    @IBOutlet weak var containerView: UIView!
+    
+    var isCurled: Bool = false
+    var curlView: XBCurlView?
+    
+    var originalStickerFrame: CGRect?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         stickerView.placeholderImage = UIImage(named: "sticker-placeholder")
-        stickerView.stickerImage = UIImage(named: "sticker-with-background")
+        stickerView.stickerImage = UIImage(named: "sticker")
         
-        shapeLayer.path = UIBezierPath(ovalIn: CGRect(x: 100, y: 100, width: 200, height: 200)).cgPath
-        shapeLayer.fillColor = UIColor.red.cgColor
+        curlView = XBCurlView(frame: containerView.bounds)
+        curlView?.isOpaque = false
+        curlView?.pageOpaque = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        //view.layer.addSublayer(shapeLayer)
+        curlView?.frame = containerView.bounds
     }
     
     @IBAction func animatePressed(_ sender: UIButton) {
-        stickerView.animate()
+//        stickerView.animate()
         
-        /* CATransaction.begin()
-        CATransaction.setAnimationDuration(1.0)
+        if originalStickerFrame == nil {
+            originalStickerFrame = stickerImageView.frame
+        }
         
-        let animation = CATransition()
-        animation.duration = 1.2
-        animation.startProgress = 1.0
-        animation.endProgress = 0.0
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        animation.type = "pageCurl"
-        animation.subtype = "fromRight"
-        animation.isRemovedOnCompletion = false
-        animation.fillMode = "extended"
-        
-        self.shapeLayer.add(animation, forKey: "pageCurlAnimation")
-        
-        CATransaction.commit() */
-        
-        /* UIView.animate(withDuration: 1, animations: {
-            let animation = CATransition()
-            animation.duration = 1.2
-            animation.startProgress = 1.0
-            animation.endProgress = 0.0
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-            animation.type = "pageCurl"
-            animation.subtype = "fromRight"
-            animation.isRemovedOnCompletion = false
-            animation.fillMode = "extended"
-            
-            self.shapeLayer.add(animation, forKey: "pageCurlAnimation")
-        }) */
+        if isCurled {
+            curlView?.uncurlAnimated(withDuration: 1.2, completion: { _ in
+                self.stickerImageView.frame = self.originalStickerFrame!
+                self.containerView.addSubview(self.stickerImageView)
+            })
+            isCurled = false
+        } else {
+            curlView?.curl(stickerImageView, cylinderPosition: CGPoint(x: placeholderImageView.frame.origin.x, y: containerView.bounds.height / 2), cylinderAngle: .pi / 2.5, cylinderRadius: 50, animatedWithDuration: 1.2)
+            isCurled = true
+        }
     }
 }
 

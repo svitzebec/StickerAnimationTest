@@ -9,5 +9,7 @@
 #ifndef StickerAnimationTest_Bridging_Header_h
 #define StickerAnimationTest_Bridging_Header_h
 
+@import XBPageCurl;
+
 
 #endif /* StickerAnimationTest_Bridging_Header_h */

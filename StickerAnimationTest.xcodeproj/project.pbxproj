@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E24C2D371E8A97C7003B93A8 /* BackFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D2F1E8A97C7003B93A8 /* BackFragmentShader.glsl */; };
+		E24C2D381E8A97C7003B93A8 /* BackVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D301E8A97C7003B93A8 /* BackVertexShader.glsl */; };
+		E24C2D391E8A97C7003B93A8 /* FrontFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D311E8A97C7003B93A8 /* FrontFragmentShader.glsl */; };
+		E24C2D3A1E8A97C7003B93A8 /* FrontVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D321E8A97C7003B93A8 /* FrontVertexShader.glsl */; };
+		E24C2D3B1E8A97C7003B93A8 /* NextPageFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D331E8A97C7003B93A8 /* NextPageFragmentShader.glsl */; };
+		E24C2D3C1E8A97C7003B93A8 /* NextPageNoTextureFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D341E8A97C7003B93A8 /* NextPageNoTextureFragmentShader.glsl */; };
+		E24C2D3D1E8A97C7003B93A8 /* NextPageNoTextureVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D351E8A97C7003B93A8 /* NextPageNoTextureVertexShader.glsl */; };
+		E24C2D3E1E8A97C7003B93A8 /* NextPageVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D361E8A97C7003B93A8 /* NextPageVertexShader.glsl */; };
+		E24C2D421E8B9D9E003B93A8 /* BackPageGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D411E8B9D9E003B93A8 /* BackPageGradient.png */; };
+		E24C2D461E8BA998003B93A8 /* Line.png in Resources */ = {isa = PBXBuildFile; fileRef = E24C2D451E8BA998003B93A8 /* Line.png */; };
 		E2BA9D5E1E89A1B600DC22A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BA9D5D1E89A1B600DC22A2 /* AppDelegate.swift */; };
 		E2BA9D601E89A1B600DC22A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BA9D5F1E89A1B600DC22A2 /* ViewController.swift */; };
 		E2BA9D631E89A1B600DC22A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BA9D611E89A1B600DC22A2 /* Main.storyboard */; };
@@ -18,6 +28,16 @@
 
 /* Begin PBXFileReference section */
 		87E15AAC8CB148F74814D31D /* Pods-StickerAnimationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickerAnimationTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StickerAnimationTest/Pods-StickerAnimationTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E24C2D2F1E8A97C7003B93A8 /* BackFragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = BackFragmentShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/BackFragmentShader.glsl; sourceTree = "<group>"; };
+		E24C2D301E8A97C7003B93A8 /* BackVertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = BackVertexShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/BackVertexShader.glsl; sourceTree = "<group>"; };
+		E24C2D311E8A97C7003B93A8 /* FrontFragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = FrontFragmentShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/FrontFragmentShader.glsl; sourceTree = "<group>"; };
+		E24C2D321E8A97C7003B93A8 /* FrontVertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = FrontVertexShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/FrontVertexShader.glsl; sourceTree = "<group>"; };
+		E24C2D331E8A97C7003B93A8 /* NextPageFragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = NextPageFragmentShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/NextPageFragmentShader.glsl; sourceTree = "<group>"; };
+		E24C2D341E8A97C7003B93A8 /* NextPageNoTextureFragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = NextPageNoTextureFragmentShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/NextPageNoTextureFragmentShader.glsl; sourceTree = "<group>"; };
+		E24C2D351E8A97C7003B93A8 /* NextPageNoTextureVertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = NextPageNoTextureVertexShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/NextPageNoTextureVertexShader.glsl; sourceTree = "<group>"; };
+		E24C2D361E8A97C7003B93A8 /* NextPageVertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = NextPageVertexShader.glsl; path = Pods/XBPageCurl/XBPageCurl/Resources/NextPageVertexShader.glsl; sourceTree = "<group>"; };
+		E24C2D411E8B9D9E003B93A8 /* BackPageGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackPageGradient.png; path = Pods/XBPageCurl/XBPageCurl/Resources/BackPageGradient.png; sourceTree = "<group>"; };
+		E24C2D451E8BA998003B93A8 /* Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Line.png; sourceTree = "<group>"; };
 		E2BA9D5A1E89A1B600DC22A2 /* StickerAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickerAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BA9D5D1E89A1B600DC22A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2BA9D5F1E89A1B600DC22A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +83,16 @@
 		E2BA9D511E89A1B600DC22A2 = {
 			isa = PBXGroup;
 			children = (
+				E24C2D451E8BA998003B93A8 /* Line.png */,
+				E24C2D411E8B9D9E003B93A8 /* BackPageGradient.png */,
+				E24C2D2F1E8A97C7003B93A8 /* BackFragmentShader.glsl */,
+				E24C2D301E8A97C7003B93A8 /* BackVertexShader.glsl */,
+				E24C2D311E8A97C7003B93A8 /* FrontFragmentShader.glsl */,
+				E24C2D321E8A97C7003B93A8 /* FrontVertexShader.glsl */,
+				E24C2D331E8A97C7003B93A8 /* NextPageFragmentShader.glsl */,
+				E24C2D341E8A97C7003B93A8 /* NextPageNoTextureFragmentShader.glsl */,
+				E24C2D351E8A97C7003B93A8 /* NextPageNoTextureVertexShader.glsl */,
+				E24C2D361E8A97C7003B93A8 /* NextPageVertexShader.glsl */,
 				E2BA9D5C1E89A1B600DC22A2 /* StickerAnimationTest */,
 				E2BA9D5B1E89A1B600DC22A2 /* Products */,
 				077457FD4D3BD841CCBC295A /* Pods */,
@@ -156,8 +186,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24C2D421E8B9D9E003B93A8 /* BackPageGradient.png in Resources */,
+				E24C2D371E8A97C7003B93A8 /* BackFragmentShader.glsl in Resources */,
+				E24C2D381E8A97C7003B93A8 /* BackVertexShader.glsl in Resources */,
+				E24C2D391E8A97C7003B93A8 /* FrontFragmentShader.glsl in Resources */,
+				E24C2D3A1E8A97C7003B93A8 /* FrontVertexShader.glsl in Resources */,
+				E24C2D3B1E8A97C7003B93A8 /* NextPageFragmentShader.glsl in Resources */,
+				E24C2D3C1E8A97C7003B93A8 /* NextPageNoTextureFragmentShader.glsl in Resources */,
+				E24C2D3D1E8A97C7003B93A8 /* NextPageNoTextureVertexShader.glsl in Resources */,
+				E24C2D3E1E8A97C7003B93A8 /* NextPageVertexShader.glsl in Resources */,
 				E2BA9D681E89A1B600DC22A2 /* LaunchScreen.storyboard in Resources */,
 				E2BA9D651E89A1B600DC22A2 /* Assets.xcassets in Resources */,
+				E24C2D461E8BA998003B93A8 /* Line.png in Resources */,
 				E2BA9D631E89A1B600DC22A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

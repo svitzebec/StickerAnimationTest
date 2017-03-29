@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,31 +21,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs4-Bt-0Nt" customClass="StickerView" customModule="StickerAnimationTest" customModuleProvider="target">
-                                <rect key="frame" x="82" y="193" width="210" height="280"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs4-Bt-0Nt" customClass="StickerView" customModule="StickerAnimationTest" customModuleProvider="target">
+                                <rect key="frame" x="102.5" y="223" width="169" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="Ty3-xh-xnp"/>
-                                    <constraint firstAttribute="height" constant="280" id="ys9-TU-Txp"/>
+                                    <constraint firstAttribute="width" constant="169" id="Ty3-xh-xnp"/>
+                                    <constraint firstAttribute="height" constant="220" id="ys9-TU-Txp"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYz-zZ-MUH">
-                                <rect key="frame" x="164" y="610" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYz-zZ-MUH">
+                                <rect key="frame" x="137" y="580" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SYw-Wb-CdC"/>
+                                    <constraint firstAttribute="width" constant="100" id="kke-jj-f4a"/>
+                                </constraints>
                                 <state key="normal" title="Animate"/>
                                 <connections>
                                     <action selector="animatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9cF-D6-9cn"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sticker-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="EO8-7C-4Ul">
+                                <rect key="frame" x="102.5" y="223" width="169" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Tdv-zD-0Am"/>
+                                    <constraint firstAttribute="width" constant="169" id="ofq-bM-6g4"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b53-oS-scf">
+                                <rect key="frame" x="37" y="203" width="300" height="260"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sticker" translatesAutoresizingMaskIntoConstraints="NO" id="7x6-ei-ILd">
+                                        <rect key="frame" x="65.5" y="20" width="169" height="220"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="220" id="2x4-bd-fCc"/>
+                                            <constraint firstAttribute="width" constant="169" id="pGe-mM-Tu0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7x6-ei-ILd" firstAttribute="centerY" secondItem="b53-oS-scf" secondAttribute="centerY" id="4a9-2D-dSy"/>
+                                    <constraint firstAttribute="width" constant="300" id="NHw-g4-viK"/>
+                                    <constraint firstItem="7x6-ei-ILd" firstAttribute="centerX" secondItem="b53-oS-scf" secondAttribute="centerX" id="agf-Wz-ao7"/>
+                                    <constraint firstAttribute="height" constant="260" id="eb4-oc-sv1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bs4-Bt-0Nt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F3x-Qa-SGz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aYz-zZ-MUH" secondAttribute="bottom" constant="27" id="FGs-If-nYa"/>
+                            <constraint firstItem="EO8-7C-4Ul" firstAttribute="centerY" secondItem="bs4-Bt-0Nt" secondAttribute="centerY" id="Qv3-48-6bX"/>
+                            <constraint firstItem="EO8-7C-4Ul" firstAttribute="centerX" secondItem="bs4-Bt-0Nt" secondAttribute="centerX" id="Tmm-C0-nHp"/>
+                            <constraint firstItem="b53-oS-scf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i9e-FH-8TX"/>
                             <constraint firstItem="bs4-Bt-0Nt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lmv-sA-2jk"/>
                             <constraint firstItem="aYz-zZ-MUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tff-Uz-1fr"/>
+                            <constraint firstItem="b53-oS-scf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zse-vS-Mzd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="b53-oS-scf" id="3bw-Tm-SC6"/>
+                        <outlet property="placeholderImageView" destination="EO8-7C-4Ul" id="JJx-CH-oOK"/>
+                        <outlet property="stickerImageView" destination="7x6-ei-ILd" id="y5G-Gc-HcL"/>
                         <outlet property="stickerView" destination="bs4-Bt-0Nt" id="bZv-pI-Sgd"/>
                     </connections>
                 </viewController>
@@ -53,4 +91,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="sticker" width="203" height="264"/>
+        <image name="sticker-placeholder" width="169" height="220"/>
+    </resources>
 </document>

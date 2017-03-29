@@ -792,6 +792,7 @@ void ImageProviderReleaseData(void *info, const void *data, size_t size);
 
 - (BOOL)setupNextPageShader
 {
+    return YES;
     [self destroyNextPageShader];
     
     NSString *vsFilename = nextPageTexture != 0? @"NextPageVertexShader.glsl": @"NextPageNoTextureVertexShader.glsl";
@@ -1042,8 +1043,12 @@ void ImageProviderReleaseData(void *info, const void *data, size_t size);
 
 - (void)createBackGradientTexture
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"BackPageGradient" ofType:@"png"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Line" ofType:@"png"];
     UIImage *backPageImage = [[UIImage alloc] initWithContentsOfFile:path];
+    
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
     backGradientTexture = [self generateTexture];
     
     glActiveTexture(GL_TEXTURE1);

@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var placeholderImageView: UIImageView!
     @IBOutlet weak var stickerImageView: UIImageView!
-    @IBOutlet weak var containerView: UIView!
     
     var isCurled: Bool = false
     var curlView: XBCurlView?
@@ -27,7 +26,16 @@ class ViewController: UIViewController {
         stickerView.placeholderImage = UIImage(named: "sticker-placeholder")
         stickerView.stickerImage = UIImage(named: "sticker")
         
-        curlView = XBCurlView(frame: containerView.bounds)
+//        stickerImageView.image = imageWithImage(image: UIImage(named: "sticker")!, scaledToSize: CGSize(width: 85, height: 110))
+//        placeholderImageView.image = imageWithImage(image: UIImage(named: "sticker-placeholder")!, scaledToSize: CGSize(width: 85, height: 110))
+        
+        stickerImageView.image = UIImage(named: "sticker")
+        placeholderImageView.image = UIImage(named: "sticker-placeholder")
+        
+        stickerImageView.contentMode = .center
+        placeholderImageView.contentMode = .center
+        
+        curlView = XBCurlView(frame: placeholderImageView.frame)
         curlView?.isOpaque = false
         curlView?.pageOpaque = true
     }
@@ -35,7 +43,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        curlView?.frame = containerView.bounds
+        curlView?.frame = placeholderImageView.frame
     }
     
     @IBAction func animatePressed(_ sender: UIButton) {
@@ -48,13 +56,21 @@ class ViewController: UIViewController {
         if isCurled {
             curlView?.uncurlAnimated(withDuration: 1.2, completion: { _ in
                 self.stickerImageView.frame = self.originalStickerFrame!
-                self.containerView.addSubview(self.stickerImageView)
+                self.view.addSubview(self.stickerImageView)
             })
             isCurled = false
         } else {
-            curlView?.curl(stickerImageView, cylinderPosition: CGPoint(x: placeholderImageView.frame.origin.x, y: containerView.bounds.height / 2), cylinderAngle: .pi / 2.5, cylinderRadius: 50, animatedWithDuration: 1.2)
+            curlView?.curl(stickerImageView, cylinderPosition: CGPoint(x: (curlView!.bounds.width / 2) - 195, y: placeholderImageView.bounds.height / 2), cylinderAngle: .pi / 1.75, cylinderRadius: 80, animatedWithDuration: 1.2)
             isCurled = true
         }
+    }
+    
+    private func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: newSize.width, height: newSize.height)))
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
     }
 }
 

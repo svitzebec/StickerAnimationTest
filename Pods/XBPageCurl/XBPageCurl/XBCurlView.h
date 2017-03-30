@@ -105,4 +105,6 @@
  */
 - (UIImage *)imageFromFramebufferWithBackgroundView:(UIView *)backgroundView;
 
+- (void)redraw;
+
 @end

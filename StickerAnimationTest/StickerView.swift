@@ -10,6 +10,10 @@ import UIKit
 
 class StickerView: UIView {
     
+    //
+    // MARK: settable properties
+    //
+    
     open var placeholderImage: UIImage? {
         didSet {
             placeholderImageView.image = placeholderImage
@@ -20,13 +24,34 @@ class StickerView: UIView {
             stickerImageView.image = stickerImage
         }
     }
+    open var contentEdgeInsets: UIEdgeInsets = .zero {
+        didSet {
+            updateFrames()
+        }
+    }
+    open var stickerEdgeInsets: UIEdgeInsets = .zero {
+        didSet {
+            updateFrames()
+        }
+    }
+    open var uncurledCylinderPosition: CGPoint?
+    open var curledCylinderPosition: CGPoint = .zero
+    open var cylinderAngle: CGFloat = .pi / 2
+    open var cylinderRadius: CGFloat = 80
+    open var curlAnimationDuration: Double = 1.2
+    open var stickerOnAtStart: Bool = false
     
-    var placeholderImageView: UIImageView
-    var stickerImageView: UIImageView
+    //
+    // MARK: private properties
+    // 
     
-    var curlView: XBCurlView?
+    private var placeholderImageView: UIImageView
+    private var stickerImageView: UIImageView
+    private var stickerContainerView: UIView
+    private var curlView: XBCurlView?
     
-    var isCurled: Bool = false
+    private var isCurled: Bool = false
+    private var isAnimating: Bool = false
     
     //
     // MARK: StickerView init
@@ -35,6 +60,7 @@ class StickerView: UIView {
     public override init(frame: CGRect) {
         placeholderImageView = UIImageView(image: placeholderImage)
         stickerImageView = UIImageView(image: stickerImage)
+        stickerContainerView = UIView()
         
         super.init(frame: frame)
         
@@ -44,6 +70,7 @@ class StickerView: UIView {
     public required init?(coder aDecoder: NSCoder) {
         placeholderImageView = UIImageView(image: placeholderImage)
         stickerImageView = UIImageView(image: stickerImage)
+        stickerContainerView = UIView()
         
         super.init(coder: aDecoder)
         
@@ -56,82 +83,108 @@ class StickerView: UIView {
     
     private func setup() {
         
-        curlView = XBCurlView(frame: bounds)
-        curlView?.isOpaque = false
-        curlView?.pageOpaque = true
+        updateFrames()
         
+        stickerContainerView.addSubview(stickerImageView)
         addSubview(placeholderImageView)
-        addSubview(stickerImageView)
-        
-        placeholderImageView.frame = bounds
-        stickerImageView.frame = bounds
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        placeholderImageView.translatesAutoresizingMaskIntoConstraints = false
-        stickerImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let placeholderTopConstraint = NSLayoutConstraint(item: placeholderImageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
-        let placeholderTrailingConstraint = NSLayoutConstraint(item: placeholderImageView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0)
-        let placeholderBottomConstraint = NSLayoutConstraint(item: placeholderImageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
-        let placeholderLeadingConstraint = NSLayoutConstraint(item: placeholderImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0)
-        
-        //addConstraints([placeholderTopConstraint, placeholderTrailingConstraint, placeholderBottomConstraint, placeholderLeadingConstraint])
-        
-        let stickerTopConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
-        let stickerTrailingConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0)
-        let stickerBottomConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
-        let stickerLeadingConstraint = NSLayoutConstraint(item: stickerImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0)
-        
-        //addConstraints([stickerTopConstraint, stickerTrailingConstraint, stickerBottomConstraint, stickerLeadingConstraint])
+        addSubview(stickerContainerView)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        placeholderImageView.frame = bounds
-        stickerImageView.frame = bounds
+        if uncurledCylinderPosition == nil {
+            uncurledCylinderPosition = CGPoint(x: bounds.width, y: bounds.height / 2)
+        }
         
-        curlView?.frame = bounds
+        if curlView == nil {
+            curlView = XBCurlView(frame: bounds)
+            curlView?.isOpaque = false
+            curlView?.pageOpaque = true
+            
+            if !stickerOnAtStart {
+                curlView?.draw(onFrontOfPage: stickerContainerView)
+                addSubview(curlView!)
+                stickerContainerView.isHidden = true
+                
+                curlView?.cylinderRadius = cylinderRadius
+                curlView?.cylinderAngle = cylinderAngle
+                curlView?.cylinderPosition = curledCylinderPosition
+                curlView?.redraw()
+                
+                isCurled = true
+            }
+        }
+        
+        updateFrames()
     }
     
     func animate() {
-        
-        if isCurled {
-            curlView?.uncurlAnimated(withDuration: 1.2, completion: { _ in
-                self.stickerImageView.frame = self.placeholderImageView.frame
-                self.addSubview(self.stickerImageView)
-            })
-            isCurled = false
-        } else {
-            curlView?.curl(stickerImageView, cylinderPosition: CGPoint(x: -100, y: bounds.height / 2), cylinderAngle: .pi / 2.5, cylinderRadius: 120, animatedWithDuration: 1.2)
-            isCurled = true
+        guard !isAnimating else {
+            return
         }
         
-        //UIView.animate(withDuration: 1, animations: {
-            
-            /* let animation = CATransition()
-            animation.duration = 1.2
-            animation.startProgress = 1.0
-            animation.endProgress = 0.0
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-            animation.type = "pageCurl"
-            animation.subtype = "fromRight"
-            animation.isRemovedOnCompletion = false
-            animation.fillMode = "extended"
-            
-            self.stickerImageView.layer.add(animation, forKey: "pageCurlAnimation")
-            
-            self.layer.shadowColor = UIColor.white.cgColor
-            self.stickerImageView.layer.shadowColor = UIColor.white.cgColor
-            self.placeholderImageView.layer.shadowColor = UIColor.white.cgColor */
-        //})
-        
+        isCurled ? uncurl() : curl()
     }
     
-}
-
-extension StickerView: CAAnimationDelegate {
+    // 
+    // MARK: convenience
+    //
     
+    private func uncurl() {
+        
+        guard let curlView = curlView, let uncurledCylinderPosition = uncurledCylinderPosition else {
+            return
+        }
+        
+        isAnimating = true
+        isCurled = false
+        
+        curlView.setCylinderPosition(uncurledCylinderPosition, cylinderAngle: cylinderAngle, cylinderRadius: cylinderRadius, animatedWithDuration: curlAnimationDuration, completion: { 
+            self.stickerContainerView.isHidden = false
+            curlView.removeFromSuperview()
+            curlView.stopAnimating()
+            
+            self.addSubview(self.stickerContainerView)
+            self.updateFrames()
+            self.isAnimating = false
+        })
+        
+        curlView.startAnimating()
+    }
     
+    private func curl() {
+        
+        guard let curlView = curlView else {
+            return
+        }
+        
+        isAnimating = true
+        isCurled = true
+        
+        if let uncurledCylinderPosition = uncurledCylinderPosition {
+            curlView.cylinderPosition = uncurledCylinderPosition
+        }
+        
+        curlView.draw(onFrontOfPage: stickerContainerView)
+        curlView.setCylinderPosition(curledCylinderPosition, cylinderAngle: cylinderAngle, cylinderRadius: cylinderRadius, animatedWithDuration: curlAnimationDuration, completion: { 
+            curlView.stopAnimating()
+            self.isAnimating = false
+        })
+        
+        addSubview(curlView)
+        stickerContainerView.isHidden = true
+        
+        curlView.startAnimating()
+    }
+    
+    private func updateFrames() {
+        
+        stickerContainerView.frame = bounds
+        placeholderImageView.frame = CGRect(x: contentEdgeInsets.left, y: contentEdgeInsets.top, width: bounds.width - contentEdgeInsets.left - contentEdgeInsets.right, height: bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom)
+        stickerImageView.frame = CGRect(x: contentEdgeInsets.left - stickerContainerView.frame.origin.x + stickerEdgeInsets.left, y: contentEdgeInsets.top - stickerContainerView.frame.origin.y + stickerEdgeInsets.top, width: stickerContainerView.frame.width - contentEdgeInsets.left - contentEdgeInsets.right - stickerEdgeInsets.left - stickerEdgeInsets.right, height: stickerContainerView.frame.height - contentEdgeInsets.top - contentEdgeInsets.bottom - stickerEdgeInsets.top - stickerEdgeInsets.bottom)
+        
+        curlView?.frame = stickerContainerView.frame
+    }
     
 }

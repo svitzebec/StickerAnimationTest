@@ -1150,6 +1150,10 @@ void ImageProviderReleaseData(void *info, const void *data, size_t size);
     [displayLink invalidate];
 }
 
+- (void)redraw {
+    [self draw:self.displayLink];
+}
+
 - (void)draw:(CADisplayLink *)sender
 {
     [EAGLContext setCurrentContext:self.context];

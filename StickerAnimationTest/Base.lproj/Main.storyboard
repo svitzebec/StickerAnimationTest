@@ -21,12 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs4-Bt-0Nt" customClass="StickerView" customModule="StickerAnimationTest" customModuleProvider="target">
-                                <rect key="frame" x="102.5" y="223" width="169" height="220"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs4-Bt-0Nt" customClass="StickerView" customModule="StickerAnimationTest" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="183" width="249" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="169" id="Ty3-xh-xnp"/>
-                                    <constraint firstAttribute="height" constant="220" id="ys9-TU-Txp"/>
+                                    <constraint firstAttribute="width" constant="249" id="Ty3-xh-xnp"/>
+                                    <constraint firstAttribute="height" constant="300" id="ys9-TU-Txp"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYz-zZ-MUH">
@@ -40,35 +40,16 @@
                                     <action selector="animatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9cF-D6-9cn"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EO8-7C-4Ul">
-                                <rect key="frame" x="-63" y="113" width="500" height="440"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="440" id="Tdv-zD-0Am"/>
-                                    <constraint firstAttribute="width" constant="500" id="sBI-57-wZh"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7x6-ei-ILd">
-                                <rect key="frame" x="-62.5" y="113" width="500" height="440"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7x6-ei-ILd" firstAttribute="height" secondItem="EO8-7C-4Ul" secondAttribute="height" id="Aeq-a6-yCV"/>
-                            <constraint firstItem="7x6-ei-ILd" firstAttribute="width" secondItem="EO8-7C-4Ul" secondAttribute="width" id="D2k-ae-yjV"/>
                             <constraint firstItem="bs4-Bt-0Nt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F3x-Qa-SGz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aYz-zZ-MUH" secondAttribute="bottom" constant="27" id="FGs-If-nYa"/>
-                            <constraint firstItem="7x6-ei-ILd" firstAttribute="centerX" secondItem="EO8-7C-4Ul" secondAttribute="centerX" id="P0b-eM-YU1"/>
-                            <constraint firstItem="EO8-7C-4Ul" firstAttribute="centerY" secondItem="bs4-Bt-0Nt" secondAttribute="centerY" id="Qv3-48-6bX"/>
-                            <constraint firstItem="EO8-7C-4Ul" firstAttribute="centerX" secondItem="bs4-Bt-0Nt" secondAttribute="centerX" id="Tmm-C0-nHp"/>
                             <constraint firstItem="bs4-Bt-0Nt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lmv-sA-2jk"/>
-                            <constraint firstItem="7x6-ei-ILd" firstAttribute="centerY" secondItem="EO8-7C-4Ul" secondAttribute="centerY" id="qxl-0n-v8j"/>
                             <constraint firstItem="aYz-zZ-MUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tff-Uz-1fr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="placeholderImageView" destination="EO8-7C-4Ul" id="JJx-CH-oOK"/>
-                        <outlet property="stickerImageView" destination="7x6-ei-ILd" id="y5G-Gc-HcL"/>
                         <outlet property="stickerView" destination="bs4-Bt-0Nt" id="bZv-pI-Sgd"/>
                     </connections>
                 </viewController>

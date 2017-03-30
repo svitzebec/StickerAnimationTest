@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StickerAnimationTest/ViewController.swift"
-            timestampString = "512478251.201389"
+            filePath = "StickerAnimationTest/StickerView.swift"
+            timestampString = "512576544.143549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "viewDidLayoutSubviews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StickerAnimationTest/ViewController.swift"
-            timestampString = "512478334.198177"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "animatePressed(_:)"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "curl()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
